@@ -168,6 +168,41 @@
                                 category = "Senior";
                                 price = 3.000;
                                 //////////////////////////////
+                                ///
+
+
+                                //8- Restaurant Bill with Membership Discount
+                                //
+                                Console.Write("Enter bill amount: ");
+                                double bill = Convert.ToDouble(Console.ReadLine());
+
+                                Console.Write("Are you a member? (yes/no): ");
+                                string answer = Console.ReadLine();
+
+                                bool member;
+
+                                if (answer == "yes")
+                                {
+                                    member = true;
+                                }
+                                else
+                                {
+                                    member = false;
+                                }
+
+                                double discount = 0;
+
+                                if (bill > 20 && member)
+                                {
+                                    discount = bill * 0.15;
+                                }
+
+                                double finalAmount = bill - discount;
+
+                                Console.WriteLine("Original Bill: " + bill);
+                                Console.WriteLine("Discount: " + discount);
+                                Console.WriteLine("Final Amount: " + finalAmount);
+                                /////////////////////////////////////////
                             }
-                }
+                    }
 }
