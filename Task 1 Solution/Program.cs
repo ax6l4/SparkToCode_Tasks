@@ -142,6 +142,32 @@
                             Console.WriteLine("Fahrenheit: " + fahrenheit);
                             Console.WriteLine("Weather: " + weather);
                             //////////////////////////////////////////
-                    }
+                            ///
+
+
+                            //7- Movie Ticket Pricing
+                            //
+                            Console.Write("Enter age: ");
+                            int age = Convert.ToInt32(Console.ReadLine());
+
+                            string category;
+                            double price;
+
+                            if (age >= 0 && age <= 12)
+                            {
+                                category = "Child";
+                                price = 2.000;
+                            }
+                            else if (age >= 13 && age <= 59)
+                            {
+                                category = "Adult";
+                                price = 5.000;
+                            }
+                            else
+                            {
+                                category = "Senior";
+                                price = 3.000;
+                                //////////////////////////////
+                            }
                 }
 }
