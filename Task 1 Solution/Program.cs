@@ -80,6 +80,40 @@
                 {
                     Console.WriteLine("Not eligible to vote");
                     /////////////////////////////////
-                }
-        }
+                    ///
+
+
+                    //5- Grade Letter Lookup
+                    //
+                    Console.Write("Enter grade: ");
+                    char grade = Convert.ToChar(Console.ReadLine());
+
+                    switch (grade)
+                    {
+                        case 'A':
+                            Console.WriteLine("Excellent");
+                            break;
+
+                        case 'B':
+                            Console.WriteLine("Very Good");
+                            break;
+
+                        case 'C':
+                            Console.WriteLine("Good");
+                            break;
+
+                        case 'D':
+                            Console.WriteLine("Pass");
+                            break;
+
+                        case 'F':
+                            Console.WriteLine("Fail");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid grade");
+                            break;
+                            ////////////////////////////////////
+                    }
+            }
 }
