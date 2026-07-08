@@ -30,6 +30,29 @@
             /////////////////////////////////
             ///
 
+
+            // Name Formatter
+            Console.Write("Enter your full name: ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("Uppercase: " + name.ToUpper());
+            Console.WriteLine("Lowercase: " + name.ToLower());
+            Console.WriteLine("Number of characters: " + name.Length);
+            ///////////////////////////////////
+            ///
+
+
+            // Subscription End Date
+            Console.Write("Enter free trial days: ");
+            int days = Convert.ToInt32(Console.ReadLine());
+
+            DateTime startDate = DateTime.Today;
+            DateTime endDate = startDate.AddDays(days);
+
+            Console.WriteLine("Trial Ends: " + endDate.ToString("yyyy-MM-dd"));
+            ///////////////////////////////////
+            ///
+
         }
     }
 }
