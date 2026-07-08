@@ -170,6 +170,28 @@
                         Console.WriteLine("Please enter a number");
                     }
                 }
+                ///////////////////////////
+                ///
+
+
+                // Task 8 - Sum of Even Numbers Only
+
+                Console.Write("Enter N: ");
+                int n = int.Parse(Console.ReadLine());
+
+                int total = 0;
+
+                for (int i = 1; i <= n; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        total += i;
+                    }
+                }
+
+                Console.WriteLine("Sum of even numbers = " + total);
+                //////////////////////////////
+                ///
 
 
 
