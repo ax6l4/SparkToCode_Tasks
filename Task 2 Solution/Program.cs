@@ -67,6 +67,39 @@
                 ///
 
 
+                // Task 5 - Number Guessing Game
+
+                int secretNumber = 42;
+                int guess;
+                int attempts = 0;
+
+                do
+                {
+                    Console.Write("Guess the number: ");
+                    guess = int.Parse(Console.ReadLine());
+
+                    attempts++;
+
+                    if (guess > secretNumber)
+                    {
+                        Console.WriteLine("Too high");
+                    }
+                    else if (guess < secretNumber)
+                    {
+                        Console.WriteLine("Too low");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Correct!");
+                    }
+
+                } while (guess != secretNumber);
+
+                Console.WriteLine("Attempts: " + attempts);
+                ////////////////////////////
+                ///
+
+
 
             }
     }
