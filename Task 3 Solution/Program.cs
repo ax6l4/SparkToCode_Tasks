@@ -31,7 +31,7 @@
             ///
 
 
-            // Name Formatter
+            //Task 3 - Name Formatter
             Console.Write("Enter your full name: ");
             string name = Console.ReadLine();
 
@@ -42,7 +42,7 @@
             ///
 
 
-            // Subscription End Date
+            // Task 4 - Subscription End Date
             Console.Write("Enter free trial days: ");
             int days = Convert.ToInt32(Console.ReadLine());
 
@@ -52,6 +52,73 @@
             Console.WriteLine("Trial Ends: " + endDate.ToString("yyyy-MM-dd"));
             ///////////////////////////////////
             ///
+
+
+            // Task 5 - Grade Rounding System
+            Console.WriteLine("Task 5 - Grade Rounding System");
+
+            Console.Write("Enter your score: ");
+            double score = Convert.ToDouble(Console.ReadLine());
+
+            double roundedScore = Math.Round(score);
+
+            Console.WriteLine("Rounded Score: " + roundedScore);
+
+            if (roundedScore >= 60)
+            {
+                Console.WriteLine("Result: Pass");
+            }
+            else
+            {
+                Console.WriteLine("Result: Fail");
+            }
+
+
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("All Tasks Completed!");
+
+            Console.ReadLine();
+            ////////////////////////////////
+            ///
+
+
+            // Task 6 - Password Strength Checker
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Task 6 - Password Strength Checker");
+
+            Console.Write("Enter password: ");
+            string password = Console.ReadLine();
+
+            bool longEnough = password.Length >= 8;
+            bool containsPassword = password.ToLower().Contains("password");
+
+            if (longEnough && !containsPassword)
+            {
+                Console.WriteLine("Password Strength: Strong");
+            }
+            else
+            {
+                Console.WriteLine("Password Strength: Weak");
+
+                if (!longEnough)
+                {
+                    Console.WriteLine("Reason: Password must be at least 8 characters.");
+                }
+
+                if (containsPassword)
+                {
+                    Console.WriteLine("Reason: Password cannot contain the word password.");
+                }
+            }
+
+            Console.ReadLine();
+            ////////////////////////////////
+            ///
+
+
+
+
+
 
         }
     }
