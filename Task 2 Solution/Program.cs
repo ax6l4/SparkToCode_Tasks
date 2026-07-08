@@ -36,19 +36,24 @@
 
 
             // Task 3 - Multiplication Table
+
             Console.Write("Enter a number: ");
             int number = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= 10; i++)
             {
-                Console.WriteLine(number + " x " + i + " = " + (number * i));
-                ////////////////////////////
-                ///
+                Console.WriteLine(number + " x " + n + " = " + (number * n));
+            }
+            /////////////////////////////
+            ///
 
 
-                // Task 4 - Password Retry
 
-                string correctPassword = "Spark2026";
+
+
+            // Task 4 - Password Retry
+
+            string correctPassword = "Spark2026";
                 string password = "";
 
                 while (password != correctPassword)
@@ -170,31 +175,37 @@
                         Console.WriteLine("Please enter a number");
                     }
                 }
-                ///////////////////////////
-                ///
+            ///////////////////////////
+            ///
 
 
-                // Task 8 - Sum of Even Numbers Only
 
-                Console.Write("Enter N: ");
-                int n = int.Parse(Console.ReadLine());
+            // Task 8 - Sum of Even Numbers Only
 
-                int total = 0;
+            Console.Write("Enter N: ");
+            int limit = int.Parse(Console.ReadLine());
 
-                for (int i = 1; i <= n; i++)
+            int total = 0;
+
+            for (int i = 1; i <= limit; i++)
+            {
+                if (i % 2 == 0)
                 {
-                    if (i % 2 == 0)
-                    {
-                        total += i;
-                    }
+                    total += i;
                 }
-
-                Console.WriteLine("Sum of even numbers = " + total);
-                //////////////////////////////
-                ///
-
-
-
             }
+
+            Console.WriteLine("Sum of even numbers = " + total);
+            ////////////////////////////////////
+            ///
+
+
+
+
+
+
+
+
+        }
     }
 }
