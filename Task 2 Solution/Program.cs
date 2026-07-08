@@ -100,6 +100,34 @@
                 ///
 
 
+                // Task 6 - Safe Division Calculator
+
+                try
+                {
+                    Console.Write("Enter first number: ");
+                    double num1 = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter second number: ");
+                    double num2 = double.Parse(Console.ReadLine());
+
+                    double result = num1 / num2;
+
+                    Console.WriteLine("Result = " + result);
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Cannot divide by zero");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please enter a valid number");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("An error occurred");
+                }
+
+
 
             }
     }
