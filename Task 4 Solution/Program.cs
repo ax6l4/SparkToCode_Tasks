@@ -21,10 +21,28 @@
 
             Console.ReadKey();
 
-         /////////////////////////////////////////
-            ///
+                /////////////////////////////////////////
+                ///
 
 
+                // Task 2 - Square Number Function
+                static int Square(int numberValue)
+                {
+                    return numberValue * numberValue;
+                }
+
+
+                // Task 3 - Celsius to Fahrenheit Function
+                static double CelsiusToFahrenheit(double celsiusValue)
+                {
+                    return (celsiusValue * 9 / 5) + 32;
+                }
+
+
+
+
+
+
+            }
         }
-    }
 }
