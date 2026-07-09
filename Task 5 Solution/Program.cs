@@ -26,6 +26,32 @@
             }
             ///////////////////////////////////////
             ///
+
+
+            // Task 2 - Dynamic To-Do List
+            static void Task2()
+            {
+                Console.WriteLine("\nTask 2 - To Do List");
+
+                List<string> todoItems = new List<string>();
+
+                for (int taskIndex = 0; taskIndex < 5; taskIndex++)
+                {
+                    Console.Write("Enter task: ");
+                    string newTask = Console.ReadLine();
+
+                    todoItems.Add(newTask);
+                }
+
+                Console.WriteLine("Your Tasks:");
+
+                foreach (string todoItem in todoItems)
+                {
+                    Console.WriteLine("- " + todoItem);
+                }
+            }
+            //////////////////////////////////////////
+            ///
         }
     }
 }
