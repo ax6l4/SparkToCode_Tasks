@@ -55,6 +55,15 @@
                 ///
 
 
+                // Task 5 - Even or Odd Function
+                static bool IsEven(int checkNumber)
+                {
+                    return checkNumber % 2 == 0;
+                }
+                /////////////////////////////////
+                ///
+
+
 
 
 
