@@ -30,6 +30,9 @@
                 {
                     return numberValue * numberValue;
                 }
+                ////////////////////////////////
+                ///
+
 
 
                 // Task 3 - Celsius to Fahrenheit Function
@@ -37,6 +40,9 @@
                 {
                     return (celsiusValue * 9 / 5) + 32;
                 }
+
+
+
 
 
 
