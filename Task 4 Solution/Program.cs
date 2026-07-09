@@ -64,6 +64,19 @@
                 ///
 
 
+                // Task 6 - Rectangle Area & Perimeter Functions
+                static double CalculateArea(double rectangleLength, double rectangleWidth)
+                {
+                    return rectangleLength * rectangleWidth;
+                }
+
+                static double CalculatePerimeter(double rectangleLength, double rectangleWidth)
+                {
+                    return 2 * (rectangleLength + rectangleWidth);
+                }
+
+
+
 
 
 
