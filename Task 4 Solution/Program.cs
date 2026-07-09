@@ -4,7 +4,27 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
+        // Task 1 - Personalized Welcome Function
+        static void PrintWelcome(string userName)
+        {
+            Console.WriteLine("Welcome " + userName);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your name: ");
+
+            string userNameInput = Console.ReadLine();
+
+            PrintWelcome(userNameInput);
+
+            Console.ReadKey();
+
+         /////////////////////////////////////////
+            ///
+
+
         }
     }
 }
