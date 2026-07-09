@@ -40,6 +40,19 @@
                 {
                     return (celsiusValue * 9 / 5) + 32;
                 }
+                ///////////////////////////////////
+                ///
+
+
+                // Task 4 - Fixed Menu Display Function
+                static void DisplayMenu()
+                {
+                    Console.WriteLine("1) Start");
+                    Console.WriteLine("2) Help");
+                    Console.WriteLine("3) Exit");
+                }
+                //////////////////////////////////
+                ///
 
 
 
