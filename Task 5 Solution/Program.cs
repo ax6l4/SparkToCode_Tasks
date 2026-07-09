@@ -83,6 +83,31 @@
             ///
 
 
+
+            // Task 4 - Customer Service Queue
+            static void Task4()
+            {
+                Console.WriteLine("\nTask 4 - Customer Queue");
+
+                Queue<string> customerQueue = new Queue<string>();
+
+                for (int customerIndex = 0; customerIndex < 3; customerIndex++)
+                {
+                    Console.Write("Enter customer name: ");
+                    string customerName = Console.ReadLine();
+
+                    customerQueue.Enqueue(customerName);
+                }
+
+                string servedCustomer = customerQueue.Dequeue();
+
+                Console.WriteLine("Served customer: " + servedCustomer);
+            }
+            //////////////////////////////////////
+            ///
+
+
+
         }
     }
 }
