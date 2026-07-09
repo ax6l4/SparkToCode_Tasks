@@ -52,6 +52,37 @@
             }
             //////////////////////////////////////////
             ///
+
+
+
+            // Task 3 - Browsing History Stack
+            static void Task3()
+            {
+                Console.WriteLine("\nTask 3 - Browser History");
+
+                Stack<string> browserHistory = new Stack<string>();
+
+                for (int websiteIndex = 0; websiteIndex < 3; websiteIndex++)
+                {
+                    Console.Write("Enter website URL: ");
+                    string websiteUrl = Console.ReadLine();
+
+                    browserHistory.Push(websiteUrl);
+                }
+
+                string previousPage = browserHistory.Pop();
+
+                Console.WriteLine("You went back from: " + previousPage);
+
+                if (browserHistory.Count > 0)
+                {
+                    Console.WriteLine("Current page: " + browserHistory.Peek());
+                }
+            }
+            ///////////////////////////////////////////////
+            ///
+
+
         }
     }
 }
