@@ -107,7 +107,42 @@
             ///
 
 
+            // Task 5 - Array Grade Range
+            static void Task5()
+            {
+                Console.WriteLine("\nTask 5 - Grade Range");
 
+                int[] gradesArray = new int[5];
+
+                for (int gradePosition = 0; gradePosition < gradesArray.Length; gradePosition++)
+                {
+                    Console.Write("Enter grade: ");
+                    gradesArray[gradePosition] = Convert.ToInt32(Console.ReadLine());
+                }
+
+
+                Array.Sort(gradesArray);
+
+                int totalGrades = 0;
+
+                for (int sumIndex = 0; sumIndex < gradesArray.Length; sumIndex++)
+                {
+                    totalGrades += gradesArray[sumIndex];
+                }
+
+                double averageGrade = totalGrades / 5.0;
+
+
+                Console.WriteLine("Lowest Grade: " + gradesArray[0]);
+                Console.WriteLine("Highest Grade: " + gradesArray[gradesArray.Length - 1]);
+                Console.WriteLine("Average: " + averageGrade);
+            }
         }
+        ///////////////////////////////////
+        ///
+
+
+
+    }
     }
 }
