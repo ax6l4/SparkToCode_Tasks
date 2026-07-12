@@ -28,7 +28,17 @@ namespace BankingSystemApp
 
                 Console.Write("Choose an option: ");
 
-                int choice = int.Parse(Console.ReadLine());
+                int choice;
+
+                try
+                {
+                    choice = int.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Invalid input.");
+                    continue;
+                }
 
 
                 switch (choice)
@@ -41,9 +51,13 @@ namespace BankingSystemApp
                         DepositMoney();
                         break;
 
+                    case 3:
+                        WithdrawMoney();
+                        break;
+
                     case 8:
                         exitApp = true;
-                        Console.WriteLine("Goodbye!");
+                        Console.WriteLine("Thank you for banking with Spark Bank.");
                         break;
 
                     default:
@@ -60,7 +74,6 @@ namespace BankingSystemApp
         {
             Console.Write("Enter customer name: ");
             string name = Console.ReadLine();
-
 
             Console.Write("Enter account number: ");
             string accountNumber = Console.ReadLine();
@@ -89,11 +102,11 @@ namespace BankingSystemApp
             balances.Add(deposit);
 
 
-            Console.WriteLine("Account created successfully!");
+            Console.WriteLine("\nAccount created successfully!");
+            Console.WriteLine("Customer Name: " + name);
+            Console.WriteLine("Account Number: " + accountNumber);
+            Console.WriteLine("Balance: " + deposit);
         }
-        /////////////////////////////////////////////////////
-        /// 
-        
 
 
 
@@ -128,9 +141,54 @@ namespace BankingSystemApp
             balances[index] += amount;
 
 
-            Console.WriteLine("Deposit successful!");
+            Console.WriteLine("\nDeposit successful!");
+            Console.WriteLine("New Balance: " + balances[index]);
+        }
+
+
+
+        // 3- Withdraw Money
+        static void WithdrawMoney()
+        {
+            Console.Write("Enter account number: ");
+            string accountNumber = Console.ReadLine();
+
+
+            int index = accountNumbers.IndexOf(accountNumber);
+
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+
+            Console.Write("Enter withdrawal amount: ");
+            double amount = double.Parse(Console.ReadLine());
+
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive.");
+                return;
+            }
+
+
+            if (amount > balances[index])
+            {
+                Console.WriteLine("Insufficient balance.");
+                return;
+            }
+
+
+            balances[index] -= amount;
+
+
+            Console.WriteLine("\nWithdrawal successful!");
             Console.WriteLine("New Balance: " + balances[index]);
         }
     }
 }
+
 
