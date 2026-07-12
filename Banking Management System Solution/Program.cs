@@ -9,6 +9,7 @@ namespace BankingSystemApp
         static List<string> accountNumbers = new List<string>();
         static List<double> balances = new List<double>();
 
+
         static void Main(string[] args)
         {
             bool exitApp = false;
@@ -27,22 +28,17 @@ namespace BankingSystemApp
 
                 Console.Write("Choose an option: ");
 
-                int choice;
+                int choice = int.Parse(Console.ReadLine());
 
-                try
-                {
-                    choice = int.Parse(Console.ReadLine());
-                }
-                catch
-                {
-                    Console.WriteLine("Invalid input.");
-                    continue;
-                }
 
                 switch (choice)
                 {
                     case 1:
                         AddAccount();
+                        break;
+
+                    case 2:
+                        DepositMoney();
                         break;
 
                     case 8:
@@ -51,19 +47,24 @@ namespace BankingSystemApp
                         break;
 
                     default:
-                        Console.WriteLine("Option not available yet.");
+                        Console.WriteLine("Invalid option.");
                         break;
                 }
             }
         }
 
+
+
+        // 1- Add Account
         static void AddAccount()
         {
             Console.Write("Enter customer name: ");
             string name = Console.ReadLine();
 
+
             Console.Write("Enter account number: ");
             string accountNumber = Console.ReadLine();
+
 
             if (accountNumbers.Contains(accountNumber))
             {
@@ -71,8 +72,10 @@ namespace BankingSystemApp
                 return;
             }
 
+
             Console.Write("Enter initial deposit amount: ");
             double deposit = double.Parse(Console.ReadLine());
+
 
             if (deposit < 0)
             {
@@ -80,14 +83,53 @@ namespace BankingSystemApp
                 return;
             }
 
+
             customerNames.Add(name);
             accountNumbers.Add(accountNumber);
             balances.Add(deposit);
 
+
             Console.WriteLine("Account created successfully!");
-            Console.WriteLine("Customer Name: " + name);
-            Console.WriteLine("Account Number: " + accountNumber);
-            Console.WriteLine("Balance: " + deposit);
+        }
+        /////////////////////////////////////////////////////
+        /// 
+        
+
+
+
+        // 2- Deposit Money
+        static void DepositMoney()
+        {
+            Console.Write("Enter account number: ");
+            string accountNumber = Console.ReadLine();
+
+
+            int index = accountNumbers.IndexOf(accountNumber);
+
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+
+            Console.Write("Enter deposit amount: ");
+            double amount = double.Parse(Console.ReadLine());
+
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive.");
+                return;
+            }
+
+
+            balances[index] += amount;
+
+
+            Console.WriteLine("Deposit successful!");
+            Console.WriteLine("New Balance: " + balances[index]);
         }
     }
 }
