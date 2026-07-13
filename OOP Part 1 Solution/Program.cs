@@ -61,6 +61,7 @@ namespace OOP_Part_1_Solution
             B1.Balance = 120;
             
             double result = B1.CheckBalance();
+            //////////
 
 
         }
