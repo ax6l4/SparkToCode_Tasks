@@ -1,6 +1,6 @@
 ﻿namespace OOP_Part_1_Solution
 {
-    internal class Program
+    class BankAccount
     {
         static void Main(string[] args)
         {
