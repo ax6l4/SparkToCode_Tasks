@@ -3,45 +3,25 @@
 namespace OOP_Part_1_Solution
 {
 
-    
-    // Add class BankAccount with the following properties and methods:
-    public class BankAccount
+    // Add class Student with the following properties and methods:
+    class student
     {
-        public int AccountNumber { get; set; }
-        public string HolderName { get; set; }
-        public double Balance { get; set; }
+        public int Grade { get; set; }
+        public string Name { get; set; }
+        public string address { get; set; }
         private string email { get; set; }
+        int age { get; set; }
 
-        //methods
-        public void Deposit(double amount)
+        //mothods 
+        public void register(string Email)
         {
-            Balance += amount;
+            email = Email;
         }
-        public void wirhdraw(double amount)
+        private void sendEmail(string message)
         {
-            if (amount <= Balance)
-            {
-                Balance -= amount;
-            }
-            else
-            {
-                Console.WriteLine("Insufficient balance.");
-            }
+            Console.WriteLine($"Sending email to {email}: {message}");
         }
-       public double CheckBalance()
-        {
-            return Balance;
-        }
-        private void printInformation()
-        {
-            Console.WriteLine("Account Number: " + AccountNumber);
-            Console.WriteLine("Holder Name: " + HolderName);
-            Console.WriteLine("Balance: " + Balance);
-        }
-        private void sendEmail()
-        {
-            Console.WriteLine("Sending email to " + email);
-        }
+
 
 
     }
@@ -53,15 +33,16 @@ namespace OOP_Part_1_Solution
 
         static void Main(string[] args)
         {
-            //Create an object with the class BankAccount
+            //Create an object with the class Student 
             //
-            BankAccount B1 = new BankAccount();
-            B1.AccountNumber= 1163;
-            B1.HolderName = "karim";
-            B1.Balance = 120;
+            student B1 = new student();
+            B1.Grade= 1163;
+            B1.Name = "karim";
+            B1.address= 120;
             
-            double result = B1.CheckBalance();
-            //////////
+            
+            //////////////////////////////////
+            ///
 
 
         }
