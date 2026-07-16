@@ -247,6 +247,58 @@
                         Console.WriteLine("Invalid Choice");
                         break;
 
+                    case 10:
+                        {
+                            Console.WriteLine("=== Room Type Breakdown Report ===");
+
+
+                            string[] roomTypes = { "Single", "Double", "Suite" };
+
+
+                            foreach (string type in roomTypes)
+                            {
+
+                                int count = rooms
+                                    .Where(r => r.RoomType == type)
+                                    .Count();
+
+
+                                Console.WriteLine("\nRoom Type: " + type);
+                                Console.WriteLine("Number of Rooms: " + count);
+
+
+
+                                if (count > 0)
+                                {
+                                    double averagePrice = rooms
+                                        .Where(r => r.RoomType == type)
+                                        .Average(r => r.PricePerNight);
+
+
+                                    Console.WriteLine("Average Price: "
+                                        + averagePrice.ToString("0.00"));
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Average Price: N/A");
+                                }
+
+                            }
+
+
+
+                            double overallAverage = rooms
+                                .Average(r => r.PricePerNight);
+
+
+
+                            Console.WriteLine("\nOverall Average Price: "
+                                + overallAverage.ToString("0.00"));
+
+
+                            break;
+                        }
+
                 }
             }
         }
